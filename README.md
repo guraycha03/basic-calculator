@@ -52,4 +52,11 @@ Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animati
 
 ## Preview
 
-https://res.cloudinary.com/dyjd4nbrf/image/upload/v1762356214/basic_calc_j599aw.png
+![Modern Calculator Preview](https://res.cloudinary.com/dyjd4nbrf/image/upload/v1762356214/basic_calc_j599aw.png)
+
+## 📸 Preview
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dyjd4nbrf/image/upload/v1762356214/basic_calc_j599aw.png" alt="Modern Calculator Preview" width="600">
+</p>
+
