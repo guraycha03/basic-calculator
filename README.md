@@ -15,7 +15,7 @@ Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animati
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 - **HTML5** – Semantic structure  
 - **CSS3** – Modern layout and custom properties for color theming  
@@ -24,7 +24,7 @@ Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animati
 
 ---
 
-## 🖼️ Design Style
+## Design Style
 
 - Soft, muted pastel palette  
 - Rounded corners and subtle inner shadows  
@@ -34,23 +34,22 @@ Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animati
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/modern-calculator.git
+   git clone https://github.com/guraycha03/basic-calculator.git
 
 2. Open the project folder:
    ```bash
    cd modern-calculator
 
 
+3. Run the app by opening:
+   ```bash
+   index.html
 
-![Modern Calculator Preview](assets/images/preview.png)
 
+## Preview
 
-Author
-
-Cha
-✨ BSIT Student | Web Design & Development Enthusiast
-Building responsive, minimalist, and user-friendly experiences.
+https://res.cloudinary.com/dyjd4nbrf/image/upload/v1762356214/basic_calc_j599aw.png
