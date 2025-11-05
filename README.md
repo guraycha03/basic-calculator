@@ -1,17 +1,16 @@
-# 🧮 Modern Minimalist Calculator
+# Modern Minimalist Calculator
 
 A soft, modern, and responsive calculator built using **HTML**, **CSS**, and **JavaScript**.  
 Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animations for a clean and calming experience.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🎨 **Minimalist & Modern Design** – Soft matte tones and rounded elements inspired by neumorphism  
-- 📱 **Responsive Layout** – Adapts smoothly across different screen sizes and devices  
-- 🧩 **Interactive Stickers** – Decorative stickers that stay perfectly aligned inside the calculator container  
-- 🔄 **Smooth View Toggle** – Expand or minimize the calculator with a single click  
-- ⚙️ **Functional Arithmetic Operations** – Supports all basic operations with clear and backspace functionality  
+- **Minimalist & Modern Design** – Soft matte tones and rounded elements inspired by neumorphism  
+- **Responsive Layout** – Adapts smoothly across different screen sizes and devices   
+- **Smooth View Toggle** – Expand or minimize the calculator with a single click  
+- **Functional Arithmetic Operations** – Supports all basic operations with clear and backspace functionality  
 
 ---
 
@@ -54,9 +53,4 @@ Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animati
 
 ![Modern Calculator Preview](https://res.cloudinary.com/dyjd4nbrf/image/upload/v1762356214/basic_calc_j599aw.png)
 
-## 📸 Preview
-
-<p align="center">
-  <img src="https://res.cloudinary.com/dyjd4nbrf/image/upload/v1762356214/basic_calc_j599aw.png" alt="Modern Calculator Preview" width="600">
-</p>
 
