@@ -1,0 +1,301 @@
+
+:root {
+  --bg-body: #f4f4f4;
+  --calc-bg: #edf0e5;
+  --bg-display: #f8f8f8;
+  --text-main: #464646;
+
+  /* Buttons */
+  --btn-default: #eaf1eb;
+  --btn-hover: #d9d9d9;
+  --btn-operator: #c1d9b8;
+  --btn-operator-hover: #a0c38f;
+  --btn-equal: #79a17c;
+  --btn-equal-hover: #6c9270;
+  --btn-neutral: #dde9dd;
+  --btn-neutral-hover: #d2dbd2;
+
+  /* Brand & Effects */
+  --brand-base: color-mix(in srgb, var(--calc-bg) 70%, #000);
+  --inner-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.2);
+  --outer-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --display-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.25),
+                    inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+
+  /* General */
+  --radius-large: 20px;
+  --radius-medium: 12px;
+  --font-main: "Quicksand", sans-serif;
+}
+
+/* Global */
+* {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  letter-spacing: 0.5px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  background: var(--bg-body);
+}
+
+body.maximized-view {
+  background: var(--calc-bg);
+  transition: background 0.3s ease;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 0.5rem;
+}
+
+body.maximized-view .stickers {
+  display: none;
+}
+
+/* Brand */
+.brand {
+  display: block;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+  pointer-events: none;
+  margin-bottom: 0.6rem;
+  color: var(--brand-base);
+  text-shadow:
+    0 1px 2px rgba(255, 255, 255, 0.5),
+    0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Calculator */
+.calculator {
+  background: var(--calc-bg);
+  border-radius: var(--radius-large);
+  box-shadow: var(--outer-shadow), var(--inner-shadow);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  position: relative;
+}
+
+.calculator.maximized {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  transform: scale(var(--zoom-scale)) translateY(var(--zoom-shift));
+  transform-origin: top center;
+  transition: transform 0.4s ease, margin 0.3s ease;
+  margin-top: var(--zoom-margin, 0px);
+}
+
+.calculator:not(.maximized) {
+  padding-top: 1.8rem;
+}
+
+.calculator.maximized .brand {
+  display: none !important;
+}
+
+.calculator.maximized {
+  padding-top: 1.2rem;
+}
+
+/* Display */
+.display {
+  background: var(--bg-display);
+  color: var(--text-main);
+  border-radius: var(--radius-medium);
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  height: 80px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+  box-shadow: var(--display-shadow);
+  border: 2px solid rgba(188, 194, 199, 0.6);
+  font-weight: 600;
+  line-height: 1.4;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Scrollbar */
+.display::-webkit-scrollbar {
+  width: 6px;
+}
+.display::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.display::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  justify-items: center;
+}
+
+/* General Button Style */
+.btn {
+  border: none;
+  border-radius: 20px;
+  background: var(--btn-default);
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: var(--inner-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  max-width: 70px;
+}
+
+/* Hover & Press */
+.btn:hover {
+  background: var(--btn-hover);
+  transform: translateY(-1px);
+}
+.btn:active {
+  background: var(--btn-hover);
+  transform: translateY(-1px);
+  box-shadow:
+    inset -3px -3px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Operator Buttons */
+.operator {
+  background: var(--btn-operator);
+  font-family: 'Nunito', 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.operator:hover {
+  background: var(--btn-operator-hover);
+}
+
+/* Equal Button */
+.equal {
+  font-family: 'Nunito', 'Quicksand', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  background: var(--btn-equal);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.equal:hover {
+  background: var(--btn-equal-hover);
+}
+
+/* Neutral Buttons (C, ⌫) */
+.clear,
+.backspace {
+  background: var(--btn-neutral);
+}
+.clear:hover,
+.backspace:hover {
+  background: var(--btn-neutral-hover);
+}
+
+/* Toggle Button */
+.toggle {
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle::before {
+  content: "⛶";
+  display: block;
+  transition: opacity 0.3s ease;
+}
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 1.8px;
+  background: rgb(97, 97, 97);
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+body.maximized-view .toggle::after {
+  opacity: 1;
+}
+
+/* Stickers */
+.stickers {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+.stickers img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 40%;
+  max-height: 40%;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.98;
+  transform-origin: center center;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  will-change: transform;
+}
+
+/* Sticker Sizes */
+.sticker-sm { height: 36px; }
+.sticker-md { height: 52px; }
+.sticker-lg { height: 72px; }
+
+@media (max-width: 360px) {
+  .stickers img { max-width: 48%; max-height: 48%; }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .display {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+}
