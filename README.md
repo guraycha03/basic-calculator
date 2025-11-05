@@ -41,7 +41,7 @@ Designed with a **matte, rounded aesthetic**, gentle shadows, and smooth animati
 
 2. Open the project folder:
    ```bash
-   cd modern-calculator
+   cd basic-calculator
 
 
 3. Run the app by opening:
